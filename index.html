@@ -4,11 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="java.js"></script>
+    <script src="java.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <h1>Welcome to Rock Paper Scissors game</h1>
+
+    <p>Click on one of the options below to play against the computer</p>
     <p>
-      To see results and choices please open the Debugger and choose console.
+      First to 5 points wins. After a winner it is announced a new round will
+      automatically start
     </p>
+    <button id="rock">Rock</button>
+    <button id="paper">Paper</button>
+    <button id="scissors">Scissors</button>
+    <div id="dashboard">
+      <div class="card">
+        <h2>Scoreboard</h2>
+        <p id="player-score">Player Score: 0</p>
+        <p id="computer-score">Computer Score: 0</p>
+        <p id="winner"></p>
+      </div>
+
+      <div class="card">
+        <h2>Current Round</h2>
+        <p id="player-choice-display">You chose: -</p>
+        <p id="computer-choice-display">Computer chose: -</p>
+        <p id="round-winner-display">Winner: -</p>
+      </div>
+
+      <div class="card">
+        <h2>Round History</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Round</th>
+              <th>You</th>
+              <th>Computer</th>
+              <th>Winner</th>
+            </tr>
+          </thead>
+          <tbody id="history-body"></tbody>
+        </table>
+      </div>
+    </div>
   </body>
 </html>
